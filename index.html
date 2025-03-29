@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Information - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    /* General Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h2 {
+    color: #050000;
+}
+
+h1 {
+    font-size: 4em;
+    color: white;
+    text-align: center;
+    margin-top: 2%;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* Header and Navigation */
+header {
+    background-color: rgb(6, 6, 43);
+    color: white;
+    padding: 0.3rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Video Background */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 5rem 2rem;
+    color: black;
+    background-image: url("back.jpg");
+    max-width: 800px;
+    margin: 0 auto;
+    border: 4px solid pink;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Featured Topics */
+.featured-topics {
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: 0%;
+}
+
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.topic {
+    background-color: white;
+    border-radius: 5px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.topic img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.topic h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: #050000;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Media Queries */
+
+/* For Tablets (Typical range: 768px - 992px) */
+@media (max-width: 992px) {
+    .hero {
+        padding: 4rem 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2.75rem;
+    }
+    nav {
+        max-width: 90%;
+    }
+    .topic-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    footer {
+        padding: 0.75rem 0;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+}
+
+/* For Phones (Typical range: below 768px) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    /* Style the menu icon */
+    nav .menu-icon {
+        display: block; /* Make it visible on smaller screens */
+        cursor: pointer;
+        font-size: 2rem;
+        padding: 0.5rem;
+        background-color: #333;
+        color: white;
+        border-radius: 5px;
+        align-self: flex-start;
+        margin-left: auto;
+    }
+
+     /* Make the icon itself (the <i> tag) visible */
+    nav .menu-icon i {
+        display: inline; /*Or block - experiment to see what works best*/
+        vertical-align: middle;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .topic-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    footer {
+        padding: 0.5rem 0;
+    }
+}
+
+/* Style the menu icon to be HIDDEN on larger screens */
+.menu-icon {
+    display: none; /* Hide by default on larger screens */
+}
+
+/*For very small phone*/
+@media (max-width:480px){
+    h1{
+        font-size: 1.5em;
+    }
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+    footer {
+        font-size: 0.85rem;
+    }
+
+}
+</style>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo"></div>
+            <!-- **IS THE MENU ICON CORRECTLY PLACED? Is the Font Awesome class right?** -->
+            <a href="about.html" class="menu-icon"><i class="fas fa-bars"></i></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="planets.html">Planets</a></li>
+                <li><a href="Galaxy.html">Galaxies</a></li>
+                <li><a href="Spacemission.html">Space Missions</a></li>
+                <li><a href="Astronomynews.html">Astronomy News</a></li>
+             </ul>
+        </nav>
+    </header>
+
+    <div class="video-container">
+        <h1>Galaxy Explore</h1>
+        <video autoplay muted loop>
+            <source src="video2.mp4" type="video/mp4">
+            Your browser doesn't support the video tag.
+        </video>
+    </div>
+
+    <main>
+         <section class="hero">
+            <h2>Explore the Universe of Knowledge</h2>
+            <p>The Galaxy Explorer website is designed to inspire curiosity,
+                educate visitors, and provide the latest updates about space and the universe.
+                It serves as a one-stop destination for space enthusiasts, students, and researchers who are eager to learn about the cosmos.</p>
+         </section>
+        <section class="featured-topics">
+            <h2>Featured Topics</h2>
+            <div class="topic-grid">
+                <div class="topic">
+                    <img src="placeholder-image.jpg" alt="News">
+                    <h3>Latest News</h3>
+                    <p>Stay up-to-date with breaking events around the world.</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div class="topic">
+                    <img src="placeholder-image.jpg" alt="Science">
+                    <h3>Science & Discovery</h3>
+                    <p>Uncover the latest scientific breakthroughs and discoveries.</p>
+                    <a href="#">Explore</a>
+                </div>
+                <div class="topic">
+                    <img src="placeholder-image.jpg" alt="History">
+                    <h3>World History</h3>
+                    <p>Delve into the rich tapestry of human history and culture.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="topic">
+                    <img src="placeholder-image.jpg" alt="Technology">
+                    <h3>Tech Innovations</h3>
+                    <p>Explore the cutting edge of technology and its impact on society.</p>
+                    <a href="#">Discover</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 Universal Information. All rights reserved.</p>
+    </footer>
+</body>
+</html>
